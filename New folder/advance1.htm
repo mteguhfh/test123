@@ -1,0 +1,148 @@
+<html>
+    <head><title>ADVANCE 1</title></head>
+    <body>
+       
+     
+            <form id="inputangka">
+                <input type="number" style="width: 3em;" max="9" min="1">
+                <input type="number" style="width: 3em;" max="9" min="1">
+                <input type="number" style="width: 3em;" max="9" min="1">
+                <br>
+                <input type="number" style="width: 3em;" max="9" min="1">
+                <input type="number" style="width: 3em;" max="9" min="1">
+                <input type="number" style="width: 3em;" max="9" min="1">
+                <br>
+                <input type="number" style="width: 3em;" max="9" min="1">
+                <input type="number" style="width: 3em;" max="9" min="1">
+                <input type="number" style="width: 3em;" max="9" min="1">
+                <br>
+                <input type="button" onclick="fungsiangka()" value="input">
+        </form>
+   
+        <script>
+            var a=[[0,0,0],[0,0,0],[0,0,0]];
+            function fungsiangka()
+            {
+                a[0][0]=document.getElementById("inputangka").elements[0].value;
+                a[0][1]=document.getElementById("inputangka").elements[1].value;
+                a[0][2]=document.getElementById("inputangka").elements[2].value;
+
+                a[1][0]=document.getElementById("inputangka").elements[3].value;
+                a[1][1]=document.getElementById("inputangka").elements[4].value;
+                a[1][2]=document.getElementById("inputangka").elements[5].value;
+
+                a[2][0]=document.getElementById("inputangka").elements[6].value;
+                a[2][1]=document.getElementById("inputangka").elements[7].value;
+                a[2][2]= document.getElementById("inputangka").elements[8].value;
+                if(a[0][0]==0)
+                {
+                    alert("tidak boleh kosong sama sekali")
+                }
+                else if(a[0][1]==0)
+                {
+                    alert("tidak boleh kosong sama sekali")
+                }
+                else if(a[0][2]==0)
+                {
+                    alert("tidak boleh kosong sama sekali")
+                }
+                else if(a[1][0]==0)
+                {
+                    alert("tidak boleh kosong sama sekali")
+                }
+                else if(a[1][1]==0)
+                {
+                    alert("tidak boleh kosong sama sekali")
+                }
+                else if(a[1][2]==0)
+                {
+                    alert("tidak boleh kosong sama sekali")
+                }
+                else if(a[2][0]==0)
+                {
+                    alert("tidak boleh kosong sama sekali")
+                }
+                else if(a[2][1]==0)
+                {
+                    alert("tidak boleh kosong sama sekali")
+                }
+                else if(a[2][2]==0)
+                {
+                    alert("tidak boleh kosong sama sekali")
+                }
+                else
+                {
+                    document.getElementById("inputangka").innerHTML=
+                    `<h1>${a[0][0]} ${a[0][1]} ${a[0][2]}
+                    <br>${a[1][0]} ${a[1][1]} ${a[1][2]}
+                    <br>${a[2][0]} ${a[2][1]} ${a[2][2]}</h1>
+                    <br>
+                    <input type="button" onclick="fungsikiri()" value="rotasi kiri">
+                    <input type="button" onclick="fungsikanan()" value="rotasi kanan">
+                    `;
+                }
+        }
+            
+            // var a=[[1,2,3],[4,5,6],[7,8,9]];
+            var temp1=0;
+            var temp2=0;
+        //     document.getElementById("tampil").innerHTML+=
+        //    `${a[0][0]} ${a[0][1]} ${a[0][2]}
+        //     <br>${a[1][0]} ${a[1][1]} ${a[1][2]}
+        //     <br>${a[2][0]} ${a[2][1]} ${a[2][2]}`;
+
+            function fungsikanan()
+            {
+                temp1= a[1][0];
+                temp2= a[2][0];
+                a[1][0]=a[2][1];
+                a[2][0]=a[2][2];
+                a[2][1]=a[1][2];
+                a[2][2]=a[0][2];
+                a[1][2]=a[0][1];
+                a[0][2]=a[0][0];
+                a[0][1]=temp1;
+                a[0][0]=temp2;
+                document.getElementById("inputangka").innerHTML=
+                   `<h1>${a[0][0]} ${a[0][1]} ${a[0][2]}
+                <br>${a[1][0]} ${a[1][1]} ${a[1][2]}
+                <br>${a[2][0]} ${a[2][1]} ${a[2][2]}</h1>
+                <br>
+                <input type="button" onclick="fungsikiri()" value="rotasi kiri">
+            <input type="button" onclick="fungsikanan()" value="rotasi kanan">`;
+                temp2=0;
+                temp1=0;
+            }
+            function fungsikiri()
+            {
+                temp1=a[0][2];
+                temp2=a[1][2];
+                a[0][2]=a[2][2];
+                a[1][2]=a[2][1];
+                a[2][2]=a[2][0];
+                a[2][1]=a[1][0];
+                a[2][0]=a[0][0];
+                a[1][0]=a[0][1];
+                a[0][0]=temp1;
+                a[0][1]=temp2;
+                document.getElementById("inputangka").innerHTML=
+                   `<h1>${a[0][0]} ${a[0][1]} ${a[0][2]}
+                <br>${a[1][0]} ${a[1][1]} ${a[1][2]}
+                <br>${a[2][0]} ${a[2][1]} ${a[2][2]}</h1>
+                <br>
+                <input type="button" onclick="fungsikiri()" value="rotasi kiri">
+                 <input type="button" onclick="fungsikanan()" value="rotasi kanan">`;
+                temp2=0;
+                temp1=0;
+            }
+            // +a[0][0]+''+a[0][1]+''+a[0][2]+'\n'
+            // +a[1][0]+''+a[1][1]+''+a[1][2]+'\n'
+            // +a[2][0]+''+a[2][1]+''+a[2][2]
+
+            // 741 123 369
+            // 852 456 258
+            // 963 789 147
+            
+            </script>
+    </body>
+</html>

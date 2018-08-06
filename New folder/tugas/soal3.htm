@@ -1,0 +1,270 @@
+<html><head><title>FORM PENDAFTARAN</title>
+    <style>
+        table,tr,td{
+            border:4px solid burlywood;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="register">
+        Daftar Manusia
+        <br>
+        <br>Nama&nbsp;&nbsp;: <input type="text">
+        <br>Umur&nbsp;&nbsp;: <input type="number">
+        <br>Kelamin&nbsp;&nbsp;: <input type="radio" name="sex" value="Pria"> Pria
+        <input type="radio" name="sex" value="Wanita"> Wanita
+        <br>Pekerjaan&nbsp;&nbsp;: <input type="text">
+        <br><input type="button" value="SUBMIT" onclick="fungsiregister()">
+        </form>
+        <p id="tampil"></p>
+        <table id="table"></table>
+        <input id="swap" type="button" value="sort nama" onclick="fungsisort(this.value)">
+        <input id="swap1" type="button" value="sort umur" onclick="fungsisort1(this.value)">
+        <input id="swap2" type="button" value="sort kelamin" onclick="fungsisort2(this.value)">
+        <input id="swap4" type="button" value="sort pekerjaan" onclick="fungsisort3(this.value)">
+        
+    <script>
+                var listband=[];
+ 
+            function fungsiregister(){
+       
+        var nama=document.getElementById("register").elements[0].value;
+        var umur=document.getElementById("register").elements[1].value;
+        var kelamin='';
+            if(document.getElementById("register").elements[2].checked)
+            {
+                sex=document.getElementById("register").elements[2].value;
+            }
+            else if(document.getElementById("register").elements[3].checked)
+            {
+                sex=document.getElementById("register").elements[3].value;
+            }
+        var pekerjaan=document.getElementById("register").elements[4].value;
+        document.getElementById("tampil").innerHTML="";
+            
+           
+            class registerband{
+                constructor(nama,umur,kelamin,pekerjaan)
+                {
+                    this.nama= nama;
+                    this.umur= umur;
+                    this.kelamin= kelamin;
+                    this.pekerjaan= pekerjaan;
+                 
+                }
+            }
+            
+            var regisband= new registerband(nama,umur,kelamin,pekerjaan);
+          
+            listband.push(regisband);
+          
+            output=`<tr>
+                <td>No.</td>
+                <td>Nama</td>
+                <td>Umur</td>
+                <td>Kelamin</td>
+                <td>Pekerjaan</td>
+
+                </tr>`;
+            for(var urut in listband)
+            
+            {
+                
+                output += `
+                <tr>
+                    <td>${parseInt(urut)+1}</td>
+                    <td>${listband[urut].nama}</td>
+                    <td>${listband[urut].umur}</td>
+                    <td>${listband[urut].kelamin}</td>
+                    <td>${listband[urut].pekerjaan}</td>
+                   
+                    </tr>`;
+            }
+            document.getElementById("table").innerHTML=output
+        }
+    
+
+
+    function fungsisort(x)
+    {
+       
+        if(x=="sort nama")
+        
+        {
+
+               
+                for (i=0;i<listband.length-1;i++)
+                {
+                    for(j=i+1;j<listband.length;j++)
+                    {
+                        if(listband[i].nama>listband[j].nama)
+                        {
+                            var sort=listband[i];
+                            listband[i]=listband[j];
+                            listband[j]=sort;
+                        }
+                    }
+                }
+                
+                    output=`<tr>
+                    <td>No.</td>
+                    <td>Nama</td>
+                    <td>Umur</td>
+                    <td>Kelamin</td>
+                    <td>Pekerjaan</td>
+                    </tr>`;
+
+                for(var urut in listband)
+                {
+                    
+                    output += `
+                    <tr>
+                        <td>${parseInt(urut)+1}</td>
+                        <td>${listband[urut].nama}</td>
+                        <td>${listband[urut].umur}</td>
+                        <td>${listband[urut].kelamin}</td>
+                        <td>${listband[urut].pekerjaan}</td>
+                    </tr>`;
+                
+                
+                }
+                document.getElementById("table").innerHTML=output
+                document.getElementById("swap").value="sort desc"
+            }
+            else if(x=="sort desc")
+            
+            {
+               
+            index=0;
+            for (i=0;i<listband.length-1;i++)
+            {
+                for(j=i+1;j<listband.length;j++)
+                {
+                    if(listband[i].nama<listband[j].nama)
+                    {
+                        var sort=listband[i];
+                        listband[i]=listband[j];
+                        listband[j]=sort;
+                    }
+                }
+            }
+                output=`<tr>
+                <td>No.</td>
+                <td>Nama</td>
+                <td>Umur</td>
+                <td>Kelamin</td>
+                <td>Pekerjaan</td>
+                </tr>`;
+            for(var urut in listband)
+            {
+                output += `
+                <tr>
+                    <td>${parseInt(urut)+1}</td>
+                    <td>${listband[urut].nama}</td>
+                    <td>${listband[urut].umur}</td>
+                    <td>${listband[urut].kelamin}</td>
+                    <td>${listband[urut].pekerjaan}</td>
+                    </tr>`;
+            }
+
+            
+        
+            document.getElementById("table").innerHTML=output
+        document.getElementById("swap").value="sort nama"
+        }
+        function fungsisort(x)
+    {
+       
+        if(x=="sort umur")
+        
+        {
+
+               
+                for (i=0;i<listband.length-1;i++)
+                {
+                    for(j=i+1;j<listband.length;j++)
+                    {
+                        if(listband[i].nama>listband[j].umur)
+                        {
+                            var sort=listband[i];
+                            listband[i]=listband[j];
+                            listband[j]=sort;
+                        }
+                    }
+                }
+                
+                    output=`<tr>
+                    <td>No.</td>
+                    <td>Nama</td>
+                    <td>Umur</td>
+                    <td>Kelamin</td>
+                    <td>Pekerjaan</td>
+                    </tr>`;
+
+                for(var urut in listband)
+                {
+                    
+                    output += `
+                    <tr>
+                        <td>${parseInt(urut)+1}</td>
+                        <td>${listband[urut].nama}</td>
+                        <td>${listband[urut].umur}</td>
+                        <td>${listband[urut].kelamin}</td>
+                        <td>${listband[urut].pekerjaan}</td>
+                    </tr>`;
+                
+                
+                }
+                document.getElementById("table").innerHTML=output
+                document.getElementById("swap2").value="sort desc"
+            }
+            else if(x=="sort desc")
+            
+            {
+               
+            index=0;
+            for (i=0;i<listband.length-1;i++)
+            {
+                for(j=i+1;j<listband.length;j++)
+                {
+                    if(listband[i].nama<listband[j].umur)
+                    {
+                        var sort=listband[i];
+                        listband[i]=listband[j];
+                        listband[j]=sort;
+                    }
+                }
+            }
+                output=`<tr>
+                <td>No.</td>
+                <td>Nama</td>
+                <td>Umur</td>
+                <td>Kelamin</td>
+                <td>Pekerjaan</td>
+                </tr>`;
+            for(var urut in listband)
+            {
+                output += `
+                <tr>
+                    <td>${parseInt(urut)+1}</td>
+                    <td>${listband[urut].nama}</td>
+                    <td>${listband[urut].umur}</td>
+                    <td>${listband[urut].kelamin}</td>
+                    <td>${listband[urut].pekerjaan}</td>
+                    </tr>`;
+            }
+
+            
+        
+            document.getElementById("table").innerHTML=output
+        document.getElementById("swap").value="sort umur"
+        }
+    }
+}
+
+
+        </script>
+</body>
+</html>

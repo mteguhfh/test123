@@ -1,0 +1,43 @@
+<body>
+    <form id="register">
+        Drawing Tools <br>
+        1. Persegi<br><br>
+        2. Segitiga siku2 rata kiri<br><br>
+        3. Segitiga siku2 rata kanan
+        <br>
+        <br>Jenis Bangunan&nbsp;&nbsp;:<br> <input type="text"><br>
+        <br>Ukuran&nbsp;&nbsp;:<br> <input type="number">
+        <br>
+        <br><input type="button" value="SUBMIT" onclick="fungsiKu()">
+    </form>
+        <p id="tampil"></p>
+
+    <script>
+        function fungsiKu ()
+        {
+            var segitigaRataKiri =''
+        var nomorSpace = prompt('masukan angka');
+        
+        var kotak =''
+        var nomorSpace = prompt('masukan angka');
+
+        for (var i=0; i<= nomorSpace; i++)
+        {   for (var j=i; j>=0 ; j--)
+            {
+                segitigaRataKiri += '* ';
+            }
+            segitigaRataKiri += '<br>';
+        }
+        document.write(segitigaRataKiri)
+        
+    
+        for (var i=0; i<= nomorSpace; i++)
+        {   for (var j=0; j< nomorSpace ; j++)
+            {
+                kotak += ' * ';
+            }
+            kotak += '<br>';
+        }
+        document.write(kotak)
+        }
+    </script>

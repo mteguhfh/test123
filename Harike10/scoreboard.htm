@@ -1,0 +1,42 @@
+<form id="form">
+    Masukan angka: <br><input type="number">
+</form>
+    <button onclick="fungsiKu()"> Submit </button>
+    <p id="tes">.....</p>
+
+    <br />
+
+    <table>
+        <tr id = "hasil">
+
+        </tr>
+
+    </table>
+    
+<script>
+    var arr =[]
+    var template =[]
+    //template 0
+    template.push('<th>&nbsp <br/>|&nbsp| <br/> |_| </br><th>')
+    //template 1
+    template.push('<th><br/>|</br>|</br></th>')
+    //template 2
+    template.push('<th>&nbsp_<br/>&nbsp&nbsp_| <br /> |_ </br></th>')
+    //template 3
+    template.push('<th>&nbsp_ <br/>&nbsp&nbsp_| <br /> %nbsp&nbsp_| </br></th>')
+    //template 4
+    template.push('<th><br/>|_| <br /> &nbsp&nbsp&nbsp| </br></th>')
+    //template 5
+    template.push('<th>&nbsp_<br/>|_<br/>&nbsp&nbsp_| </br></th>')
+    function lihat() 
+    {
+        arr = document.getElementById("inputUser").value.split('')
+        var outPut = ''
+
+        for (var i = 0; i < arr.length; i++)
+        {
+            outPut += template[parseInt(arr[i])]
+        }
+    document.getElementById('hasil').innerHTML = outPut
+    }
+</script>

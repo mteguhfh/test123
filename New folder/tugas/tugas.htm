@@ -1,0 +1,130 @@
+<html>
+    <head><title>TUGAS</title></head>
+    <body>
+        <script>
+        //     var arr=[];
+        //    for(;;)
+        //    {
+        //         var input=prompt("input makanan \n");
+                
+                
+                
+        //         if(input=='keluar')
+        //         {
+        //             break;
+        //         }
+        //         else{
+        //         arr.push(input);
+        //         var hitarr=arr.length;
+        //         alert(hitarr);
+                
+        //         }
+        //    }
+        //    var temparr='';
+        //    for(i=0;i<hitarr;i++)
+        //         {
+        //              temparr+='\n'+arr[i];
+        //         }
+        //         alert(temparr);
+            var menu= [['Hokban combo 1','20000'],['Hokban combo 2','30000']];
+            var tampilMenu='';
+            var hitMenu=menu.length;
+            for(var i=0;i<hitMenu;i++)
+                {
+                     tampilMenu+='\n'+(i+1)+'. '+menu[i];
+                }
+                console.log(tampilMenu);
+            var cart=[];
+           var payment=0;
+            //     console.log(tampilCart);
+            // console.log(cart);
+            for(;;)
+            {   
+                var pilih=prompt("Welcome to Hokban silahkan pilih menu: \n1. Menu \n2. Cart \n3. Payment \n4. Exit"
+        );
+                if(pilih==1)
+                {    var pilihMenu=prompt("Silahkan pilih menu:"+tampilMenu);
+                        if(pilihMenu==1)
+                        {  
+                            cart.push(menu[0]);
+                        }
+                        else if(pilihMenu==2)
+                        {
+                            cart.push(menu[1]);
+                        }
+                      
+                }
+                else if(pilih==2)
+                {   
+                    if(cart==0)
+                    {
+                        alert('Belum ada Pesanan');
+                    }
+                    else
+                    {
+                        var isiCart='Berikut isi Cart:';
+                    
+                        for(i=0;i<cart.length;i++)
+                        {   
+                            isiCart+='\n'+(i+1)+'. '+cart[i];
+                        }
+                        var tampilCart=prompt(isiCart);
+                    }
+                    
+                }
+                else if(pilih==3)
+                {
+                    if(cart==0)
+                    {
+                        alert('Belum ada pesanan');
+                    }
+                    else
+                    {
+                        for(i=0;i<cart.length;i++)
+                        {   
+                            payment+=parseInt(cart[i][1]);
+                        }
+                        var isiPayment=prompt('Berikut Total Payment : '+payment);
+                        if(isiPayment==payment)
+                        {
+                            alert('lunas');
+                            cart=[];
+                            payment=0;
+                            isiPayment=0;
+                        }
+                        else if(isiPayment<payment)
+                        {
+                            alert('saldo tidak cukup');
+                            isiPayment=0;
+                            payment=0;
+                        }
+                        else
+                        {
+                            isiPayment=parseInt(isiPayment);
+                            isiPayment=isiPayment-payment;
+                            alert('kembalian:'+isiPayment)
+                            cart=[];
+                            payment=0;
+                            isiPayment=0;
+                        }
+                    }
+                }
+                else if(pilih==4)
+                {
+                    if(cart==0)
+                    {
+                        alert('terima kasih');
+                        break;
+                    }
+                    else
+                    {
+                        alert('bayar dulu, pesan2 gk bayar');
+                    }
+                }
+                
+
+            }
+          
+             </script>
+    </body>
+</html>

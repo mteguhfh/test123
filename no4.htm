@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>PR No 4</title>
+</head>
+ <body>
+     <script>
+      Pertanyaan = 485
+
+       hasilTahun  = Math.floor(Pertanyaan/360);
+       hasilBulan  = Math.floor((Pertanyaan-360)/30);
+       hasilMinggu = Math.floor(((Pertanyaan-360)-(30 * hasilBulan))/7);
+       hasilHari   = Math.floor((485-360)-hasilBulan*30);
+      
+       Hasil = hasilTahun + "tahun" + hasilBulan + 'bulan' + hasilMinggu + 'minggu' + hasilHari + 'hari';
+
+     document.write(Hasil);
+     </script>   
+ </body>   
+</html>

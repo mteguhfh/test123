@@ -1,0 +1,69 @@
+<!-- no 19 -->
+<script>
+    var z =''
+    var nomorSpace = prompt('masukan angka');
+
+    for (var i=1; i<= nomorSpace; i+=2)
+    {   for (var l=nomorSpace; l>i ; l--)
+        {
+            z += '&nbsp ';
+        }
+        for (var j=1; j<=i ; j++)
+        {
+            z += '* ' + ' &nbsp';
+        }
+        z += '<br>';
+    }
+    document.write(z)
+
+</script>
+
+<!-- no 20 -->
+<!-- <script>
+
+    var z='';
+    var nomorTinggi       = parseInt(prompt(' masukan tinggi'));
+    var nomorPanjangSisis = parseInt(prompt('masukan sisi'));
+    for (var i=0; i<nomorTinggi; i+=2)
+    {   for (var j=0; j<=i ; j++)
+        {
+            z += ' &nbsp';
+        }
+        for (var j=nomorPanjangSisis; j>i ; j--)
+        {
+            z +='&nbsp' + '0 ';
+        }
+        z += '<br>';
+    }
+    document.write(z)
+
+</script> -->
+
+<!-- no 21 -->
+<!-- <script>
+    var z =''
+    var nomorSpace = prompt('masukan angka');
+    for (var i=0; i<= nomorSpace; i+=2)
+    {   for (var j=nomorSpace; j>i ; j--)
+        {
+            z += '&nbsp ';
+        }
+        for (var j=0; j<=i ; j++)
+        {
+            z += '0 ' + ' &nbsp';
+        }
+        z += '<br>';
+    }
+    for (var i=0; i<nomorSpace; i+=2)
+    {   for (var j=0; j<=i ; j++)
+        {
+            z += ' &nbsp';
+        }
+        for (var j=nomorSpace; j>i ; j--)
+        {
+            z +='&nbsp' + '0 ';
+        }
+        z += '<br>';
+    }
+    document.write(z)
+</script> -->

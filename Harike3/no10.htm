@@ -1,0 +1,222 @@
+
+
+<!-- pr no 10 -->
+<!-- <script>
+    var inputAngka1 = parseInt(prompt('masukan angka'));
+    
+    if (inputAngka1%2 == 0 )
+    {
+        alert(inputAngka1 + ' merupakan bilangan genap ');
+    }
+    else
+    {
+        alert(inputAngka1 + ' merupakan bilangan ganjil ');
+    }
+
+    switch(true){
+        case (inputAngka1%2 == 0):
+            alert(inputAngka1 + ' merupakanbilangan genap');
+            break;
+        default:
+            alert(inputAngka1 + ' merupakan bilangan ganjil ');
+    }
+
+ </script>   
+
+ 
+<!-- pr no 11 -->
+
+<!-- <script>
+    var hari  = new Date
+    var bulan = (hari.getMonth())
+
+    if (bulan == 0)
+    {
+        document.write('saat ini bulan 1 : januari');
+    }
+    else if (bulan == 1)
+    {
+        document.write('saat ini bulan 2 : februari');
+    }
+    else if (bulan == 2)
+    {
+        document.write('saat ini bulan 3 : maret');
+    }
+    else if (bulan == 3)
+    {
+        document.write('saat ini bulan 4 : april');
+    }
+    else if (bulan == 4)
+    {
+        document.write('saat ini bulan 5 : mei');
+    }
+    else if (bulan == 5)
+    {
+        document.write('saat ini bulan 6 : juni');
+    }
+    else if (bulan == 6)
+    {
+        document.write('saat ini bulan 7 : juli');
+    }
+    else if (bulan == 7)
+    {
+        document.write('saat ini bulan 8 : agustus');
+    }
+    else if (bulan == 8)
+    {
+        document.write('saat ini bulan 9 : september');
+    }
+    else if (bulan == 9)
+    {
+        document.write('saat ini bulan 10 : oktober');
+    }
+    else if (bulan == 10)
+    {
+        document.write('saat ini bulan 11 : november');
+    }
+    else
+    {
+        document.write('saat ini bulan 12 : desember');
+    }
+</script> --> -->
+
+<!-- pr no 12 -->
+
+<script>
+    var a = new Date();
+    var tanggal = a.getDate();
+    var hari  = a.getDay();
+    var bulan = a.getMonth();
+    var tahun = a.getFullYear();
+    var jam   = a.getHours();
+    var menit = a.getMinutes();
+    var detik = a.getSeconds();
+    var namaHari;
+    var namaBulan;
+
+    if (bulan == 0)
+    {
+        namaBulan = 'januari';
+    }
+    else if (bulan == 1)
+    {
+        namaBulan = 'februari';
+    }
+    else if (bulan == 2)
+    {
+        namaBulan = 'maret';
+    }
+    else if (bulan == 3)
+    {
+        namaBulan = 'april';
+    }
+    else if (bulan == 4)
+    {
+        namaBulan = 'mei';
+    }
+    else if (bulan == 5)
+    {
+        namaBulan = 'juni';
+    }
+    else if (bulan == 6)
+    {
+        namaBulan = 'juli';
+    }
+    else if (bulan == 7)
+    {
+        namaBulan = 'agustus';
+    }
+    else if (bulan == 8)
+    {
+        namaBulan = 'september';
+    }
+    else if (bulan == 9)
+    {
+        namaBulan ='oktober';
+    }
+    else if (bulan == 10)
+    {
+        namaBulan = 'november';
+    }
+    else 
+    {
+        namaBulan = 'desember';
+    }
+
+    if (hari == 0)
+    {
+        namaHari = 'minggu';
+    }
+    else if (hari == 1)
+    {
+        namaHari ='senin';
+    }
+    else if (hari == 2)
+    {
+        namaHari = 'selasa';
+    }
+    else if (hari == 3)
+    {
+        namaHari = 'rabu';
+    }
+    else if (hari == 4)
+    {
+        namaHari = 'kamis';
+    }
+    else if (hari == 5)
+    {
+        namaHari = 'jumat';
+    }
+    else if (hari == 6)
+    {
+        namaHari ='sabtu';
+    }
+    else
+    {
+        namaHari = 'minggu';
+    }
+
+    document.write('Hari ini' + ' ' + namaHari + ', ' + tanggal + ' ' + namaBulan + ' ' + tahun + '<br> Pukul' + ' ' +  jam + ':' + menit + ':' + detik)
+
+</script>
+
+<!-- <script>
+    var Date = new Date()
+    var hariText = ['minggu', 'senin', 'selasa', 'rabu']
+    var bulanText = ['Januari', 'februari']
+
+    console.log ('hari ini' + ' '+ hariText[date.getDate])
+
+</script> -->
+    
+<!-- pr no 13 -->
+
+<!-- <script>
+    var berat  = (prompt('masukan berat'))
+    var tinggi = (prompt('masukan tinggi'))
+    var IMT    = berat / tinggi**2
+
+    document.write ( 'berat' + ' ' + berat + ' ' + 'kg' + ' ' + '&' + ' ' + 'tinggi' + ' ' + tinggi + ' ' + 'm' + '<br> IMT' + ' ' + '=' + ' ' + IMT + ', ')
+
+    if (IMT < 18.5)
+    {
+        document.write ('berat badan kurang');
+    }
+    else if (IMT <= 24.9 &&  IMT >= 18.5)
+    {
+        document.write ('berat badan ideal');
+    }
+    else if (IMT <= 29.9 && IMT >=25.0)
+    {
+        document.write ('BB berlebihan');
+    }
+    else if (IMT <= 39.9 && IMT >= 30.0)
+    {
+        document.write ('BB sangat berlebihan')
+    }
+    else
+    {
+        document.write ('obesitas')
+    }
+
+</script> -->

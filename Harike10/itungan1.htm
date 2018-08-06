@@ -1,0 +1,166 @@
+<!-- solve it 6 -->
+<form id="form">
+    Masukan angka: <br><input type="number">
+</form>
+    <button onclick="fungsiKu()"> Kuadratkan! </button>
+    <p id="tes"> Hasil </p>
+    
+<script>
+    function fungsiKu() 
+    {
+        var masukanAngka = document.getElementById("form").elements[0].value;
+        var inputNilai   = Math.pow(masukanAngka,2)
+        document.getElementById("tes").innerHTML = 'Hasil ' + masukanAngka + '<sup>2</sup>' + ' = ' + inputNilai
+    }
+</script>
+
+<!-- solve it 7 -->
+<!-- <form id="form">
+        Masukan angka 1: <input type="number">
+        <br>
+        Masukan angka 2: <input type="number">
+</form>
+        <button onclick="fungsiKu()"> Pangkatkan! </button>
+        <p id="tes"> Hasil </p>
+        
+<script>
+        function fungsiKu() 
+        {
+            var masukanAngka1 = document.getElementById("form").elements[0].value;
+            var masukanAngka2 = document.getElementById("form").elements[1].value;
+            var nilaiPangkat  = Math.pow(masukanAngka1,masukanAngka2)
+            document.getElementById("tes").innerHTML = 'Hasil ' + masukanAngka1 + '<sup>' + masukanAngka2 + '</sup>' + ' = ' + nilaiPangkat
+        }
+</script> -->
+
+<!-- solve it 8 -->
+<!-- <form id="form">
+        Ketik Kalimat: <br> <input type="text">
+        <br>
+        Karakter yang Dicari: <br> <input type="text">
+</form>
+        <button onclick="fungsiKu()"> Cari! </button>
+        <p id="tes"> Hasil </p>
+        
+<script>
+        function fungsiKu() 
+        {
+            var masukanKalimat = document.getElementById("form").elements[0].value;
+            var masukanHuruf   = document.getElementById("form").elements[1].value;
+            var banyakHuruf    = masukanKalimat.split(masukanHuruf)
+            document.getElementById("tes").innerHTML = ' Jumlah ' + masukanHuruf + ' sebanyak ' + (banyakHuruf.length - 1) + ' buah '
+        }
+</script> -->
+
+<!-- <form id="form">
+    Masukan angka 1 : <input type="number">
+    <br>
+    Masukan angka 2 : <input type="number">
+</form>
+<input type="button" onclick="fungsiKu1()" value ="Kali x">
+<input type="button" onclick="fungsiKu2()" value ="Bagi :">
+<input type="button" onclick="fungsiKu3()" value ="Tambah +">
+<input type="button" onclick="fungsiKu4()" value ="Kurang -">
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" onclick="fungsiKu5()" value ="Modulus %">
+<input type="button" onclick="fungsiKu6()" value ="Pangkat ^">
+<p id="output"></p>
+    
+<script>
+    function fungsiKu1(){
+        var masukanAngka1 = document.getElementById("form").elements[0].value;
+        var masukanAngka2 = document.getElementById("form").elements[1].value;
+        var hasilPerkalian  = masukanAngka1*masukanAngka2;  
+        document.getElementById("output").innerHTML = hasilPerkalian
+    }
+    function fungsiKu2(){
+        var masukanAngka1 = document.getElementById("form").elements[0].value;
+        var masukanAngka2 = document.getElementById("form").elements[1].value;
+        var hasilPembagian  = masukanAngka1/masukanAngka2;  
+        document.getElementById("output").innerHTML = hasilPembagian
+    }
+    function fungsiKu3(){
+        var masukanAngka1 = parseInt(document.getElementById("form")).elements[0].value;
+        var masukanAngka2 = parseInt(document.getElementById("form")).elements[1].value;
+        var hasilTambah   = masukanAngka1+masukanAngka2;  
+        document.getElementById("output").innerHTML = hasilTambah
+    }
+    function fungsiKu4(){
+        var masukanAngka1 = document.getElementById("form").elements[0].value;
+        var masukanAngka2 = document.getElementById("form").elements[1].value;
+        var hasilKurang   = (masukanAngka1 - masukanAngka2);  
+        document.getElementById("output").innerHTML = hasilKurang
+    }
+    function fungsiKu5(){
+        var masukanAngka1 = document.getElementById("form").elements[0].value;
+        var masukanAngka2 = document.getElementById("form").elements[1].value;
+        var hasilModulus  = masukanAngka1%masukanAngka2;  
+        document.getElementById("output").innerHTML = hasilModulus
+    }
+    function fungsiKu6(){
+        var masukanAngka1 = document.getElementById("form").elements[0].value;
+        var masukanAngka2 = document.getElementById("form").elements[1].value;
+        var hasilPangkat  = Math.pow(masukanAngka1,masukanAngka2);  
+        document.getElementById("output").innerHTML = hasilPangkat
+    }
+</script> -->
+
+<form id="form">
+    <b>1. Siapakah Preside ketiga Republik indonesia?</b> <br> <br>
+    <input type="radio" name="jawaban no 1" value="Prof. B.J. Habibie"> Prof. B.J. Habibie
+    <input type="radio" name="jawaban no 1" value="Abdurrahman Wahid"> Abdurrahman Wahid
+    <input type="radio" name="jawaban no 1" value="Ir. Soekarno"> Ir. Soekarno
+    <input type="radio" name="jawaban no 1" value="Joko Widodo"> Joko Widodo
+    <br>
+    <br>
+    <b>2. Berikut adalah nama-nama bahasa pemrograman, kecuali ...</b><br><br>
+    <input type="radio" name="jawaban no 2" value="Python"> Python
+    <input type="radio" name="jawaban no 2" value="Micro:bit"> Micro bit
+    <input type="radio" name="jawaban no 2" value="Java Script"> Java Script
+    <input type="radio" name="jawaban no 2" value="HTML"> HTML
+    <br>
+    <br>
+    <b>3. Apa judul lagu yang diduga diplagiat oleh lagu 'Sayang' Via Vallen?</b><br><br>
+    <input type="radio" name="jawaban no 3" value="Qing Fei De Yi"> Qing Fei De Yi
+    <input type="radio" name="jawaban no 3" value="Ting Hai"> Ting Hai
+    <input type="radio" name="jawaban no 3" value="Mirai E Kiroro"> Mirai E Kiroro
+    <input type="radio" name="jawaban no 3" value="Hau Siang Hau Siang"> Hau Siang Hau Siang
+    <br>
+    <br>
+    <b>4. Siapakah sosok di balik topeng Batman?</b><br><br>
+    <input type="radio" name="jawaban no 4" value="Natasha Romanov"> Natasha Romanov
+    <input type="radio" name="jawaban no 4" value="Peter Parker"> Peter Parker
+    <input type="radio" name="jawaban no 4" value="Tony Stark"> Tony Stark
+    <input type="radio" name="jawaban no 4" value="Bruce Wayne"> Bruce Wayne
+</form>
+<input type="button" onclick="fungsiKu2()" value ="submit">
+<p id="output"></p>
+    
+<script>
+    function fungsiKu2(){
+        var jawabanNo1 = 0;
+        if(document.getElementById("form").elements[0].checked)
+        {
+            jawabanNo1 += 25 
+        }
+        var jawabanNo2 = 0; 
+        if(document.getElementById("form").elements[5].checked)
+        {
+            jawabanNo2 += 25
+        }
+        var jawabanNo3 = 0;
+        if(document.getElementById("form").elements[10].checked)
+        {
+            jawabanNo3 += 25
+        }
+        var jawabanNo4 = 0;
+        if(document.getElementById("form").elements[15].checked)
+        {
+            jawabanNo4 += 25
+        }
+        var output = 'Nilai akhir Anda ' + (jawabanNo1 + jawabanNo2 + jawabanNo3 + jawabanNo4)
+        document.getElementById("output").innerHTML = output
+    }
+</script>

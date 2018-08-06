@@ -1,0 +1,70 @@
+<html>
+    <head><title>SOLVE2</title></head>
+    <body>
+        <p id="soal1"></p>
+        <h1 id="soal9" style="font-size: 90pt"></h1>
+
+    </body>
+</html>
+<script>
+    // soal 1
+    // var x=4;
+    // var y=3;
+    // var z=2;
+    // var w=((x+y*z)/(x*y))**z;
+    // document.getElementById('soal1').innerHTML=w;
+    //soal 2
+    // var angka=prompt("Silahkan Masukkan angka berapapun");
+    // var angka1=parseInt(angka);
+    // alert("Kuadrat dari " +angka+ " = "+Math.pow(angka1,2) );
+    //soal 3
+    // document.write(Math.cbrt(8));
+    // soal 4    
+    // var hari=485;
+    // var tahun= Math.floor(hari/360);
+    // hari = hari%360;
+    // var bulan=Math.floor(hari/30);
+    // hari = hari %30;
+    // var minggu = Math.floor(hari/7);
+    // hari = hari %7;
+    // document.write(Math.floor(tahun)+" tahun<br>"+Math.floor(bulan)+" bulan<br>"+Math.floor(minggu)+" minggu <br>"+hari+" hari ");
+    //soal 5
+    // 2/7 x 49 = 14+2=16
+    // 5/7 x 49 = 35+2=37
+    // 16+37=53
+    // var totalusia=49;
+    // var andi=4;
+    // var budi=10;
+    // console.log((andi/(andi+budi))*totalusia+2);
+    // console.log((budi/(andi+budi))*totalusia+2);
+    // soal 6
+    // let a = new Date();
+    // console.log("Hari ini tanggal "+a.getDate()+"-"+(a.getMonth()+1)+"-"+(a.getFullYear()+1));
+    // console.log("Besok tanggal " +(a.getDate()+1)+"-"+(a.getMonth()+1)+"-"+(a.getFullYear()+1));
+    // console.log("Kemarin tanggal "+(a.getDate()-1)+"-"+(a.getMonth()+1)+"-"+(a.getFullYear()+1));
+    // soal7
+    // var kalimat = prompt("silahkan ketik kalimat:");
+    // var huruf = prompt("silahkan ketik huruf yang mau dihitung:");
+    // console.log(kalimat.split(huruf).length-1);
+    // document.write(kalimat.split(huruf).length-1);
+    // soal 8
+    // 120 km
+    // 60+40=100km/h
+    // 60km/h/100km/h x 120 km= 72km
+    // 72km/60km/h=1.2h
+    // 1.2hx60=72menit=1jam 12menit
+    // 9+ 1jam 12 menit= 10:12
+    var jarak= 120;
+    var kecA= 60;
+    var kecB= 40;
+    var jarakA=(kecA/(kecA+kecB))*jarak;
+    var waktuA=jarakA/kecA;
+    var jam= Math.floor(waktuA);
+    var menit=(waktuA-jam)*60;
+     document.write(menit);
+    
+    // soal 9
+    // console.log(Math.floor(Math.random()*100)+1);
+    // document.write(Math.floor(Math.random()*100)+1);
+    // document.getElementById('soal9').innerHTML=(Math.floor(Math.random()*100)+!);
+</script>

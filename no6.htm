@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>PR No 6</title>
+</head>
+ <body>
+     <script>
+      var tglHariIni = new Date()
+      var tglBesok = ('besok' +' '+ 'tanggal' + ' ' + (tglHariIni.getDate()+1) + '-' + (tglHariIni.getMonth() + 1) + '-' + (tglHariIni.getFullYear()));
+      var tglKemarin = ('kemarin' +' '+ 'tanggal' + ' ' + (tglHariIni.getDate()-1) + '-' + (tglHariIni.getMonth() + 1) + '-' + (tglHariIni.getFullYear()));
+
+      document.write(tglHariIni) + '<br>'
+      document.write(tglBesok) + '<br>'
+      document.write(tglKemarin) + '<br>'
+     </script>   
+ </body>   
+</html>

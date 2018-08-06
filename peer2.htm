@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Peer Database 2</title>
+    </head>
+    <body>
+        <p id="nama"></p>
+        <script>
+            var inputNama       = prompt('Input nama anda:');
+            var inputTanggal    = prompt('Input tanggal lahir anda:');
+            var inputAlamat     = prompt('Input alamat rumah anda:');
+            var inputPendidikan = prompt('Input pendidikan terakhir:');
+            var inputPekerjaan  = prompt('Input pekerjaan:');
+            document.getElementById('nama').innerHTML = 'nama : ' + inputNama + '<br>' + 'tanggal lahir : ' + inputTanggal + '<br>' + 'alamat lengkap : ' + inputAlamat + '<br>' + 'pendidikan terakhir : ' + inputPendidikan + '<br>' + 'pekerjaan : ' + inputPekerjaan;
+            alert('Data berhasil disimpan.\n Terima kasih atas partisipasi anda.')
+        </script> 
+    </body>
+</html>

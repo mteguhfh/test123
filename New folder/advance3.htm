@@ -1,0 +1,43 @@
+<html>
+    <head><title>DIGIT</title></head>
+    <body>
+        <form id="mesin">
+            Input<input type="number">
+            <input type="button" value="submit" onclick="fungsidigit()"/>
+        </form>
+        <table><tr id="tampil"></tr></table>
+        <script>
+            tempTampil=[];
+            size=7;
+            tempTampil.push(`<td width="${size}px">&nbsp_<br>|&nbsp&nbsp|<br>|_|</td>`)
+            tempTampil.push(`<td width="${size}px"><br>|<br>|</td>`)
+            tempTampil.push(`<td width="${size}px">&nbsp_<br>&nbsp_|<br>|_</td>`)
+            tempTampil.push(`<td width="${size}px">&nbsp_<br>&nbsp_|<br>&nbsp_|</td>`)
+            tempTampil.push(`<td width="${size}px">&nbsp<br>|_|<br>&nbsp&nbsp&nbsp|</td>`)
+            tempTampil.push(`<td width="${size}px">&nbsp_<br>|_<br>&nbsp_|</td>`)
+            tempTampil.push(`<td width="${size}px">&nbsp_<br>|_<br>|_|</td>`)
+            tempTampil.push(`<td width="${size}px">&nbsp_<br>&nbsp&nbsp&nbsp|<br>&nbsp&nbsp&nbsp|</td>`)
+            tempTampil.push(`<td width="${size}px">&nbsp_<br>|_|<br>|_|</td>`)
+            tempTampil.push(`<td width="${size}px">&nbsp _<br>|_|<br>&nbsp_|</td>`)
+        function fungsidigit()
+        {
+            var digit=document.getElementById("mesin").elements[0].value;
+            document.getElementById("tampil").innerHTML="";
+            tempDigit=digit.split("");
+            outPut="";
+            for(i=0;i<tempDigit.length;i++)
+            {
+                outPut+= tempTampil[parseInt(tempDigit[i])];
+            }
+            console.log(tempTampil.length);
+            for(j=0;j<tempTampil.length;j++)
+            {
+                document.getElementById("tampil").innerHTML=outPut
+                
+            }
+            
+            
+        }
+        </script>
+    </body>
+</html>

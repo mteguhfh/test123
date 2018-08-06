@@ -1,0 +1,203 @@
+<html><head><title>FORM PENDAFTARAN</title>
+    <style>
+        table,tr,td{
+            border:4px solid burlywood;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="register">
+        Tim BoyBand
+        <br>
+        <br>Nama&nbsp;&nbsp;: <input type="text">
+        <br>Umur&nbsp;&nbsp;: <input type="number">
+        <br>Suara&nbsp;&nbsp;: 
+        <select name="suara" >
+        <option value="" selected>--------</option>
+        <option value="jelek">JELEK</option>
+        <option value="bagus">BAGUS</option>    
+        </select>
+        <br>Ras&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+        <select name="ras" >
+            <option value="" selected>--------</option>
+            <option value="korea">Korea</option>
+            <option value="jepang">Jepang</option>   
+            </select>
+        <br>Tinggi&nbsp; : <input type="number">
+        <br><input type="button" value="SUBMIT" onclick="fungsiregister()">
+        </form>
+        <p id="tampil"></p>
+        <table id="table"></table>
+        <input id="swap" type="button" value="sort asc" onclick="fungsisort(this.value)">
+        <!-- id swap utk merubah value, caranya ada di dalam function->if dan else if  -->
+    <script>
+                var listband=[];//listband ini dipakai oleh fungsiregister() dan fungsisort
+    //alasan kenapa di luar, kalau didalam function setiap kali function di jalankan
+    //function akan mereset listband=[] yg berarti kosong
+            function fungsiregister(){
+        //PERTAMA DI LAKUKAN ADALAH GIMANA CARANYA SUPAYA VALUE BISA TERTAMPUNG.
+        //BUAT VAR PENAMPUNG.
+        var nama=document.getElementById("register").elements[0].value;
+        var umur=document.getElementById("register").elements[1].value;
+        var suara=document.getElementById("register").elements[2].value;
+        var ras=document.getElementById("register").elements[3].value;
+        var tinggi=document.getElementById("register").elements[4].value;
+        // SETELAH VALUE SDH TERTAMPUNG. BARU BISA MELAKUKAN VALIDASI ATAU KONDISI DAN SYARAT
+        // YANG INGIN DITENTUKAN
+        if(tinggi<170)
+        {//WARNING APA BILA TINGGI GK MEMENUI SYARAT
+            document.getElementById("tampil").innerHTML="TIDAK BISA MENDAFTAR";
+        }
+        else//KONDISI ELSE DI JALANKAN APABILA SUDAH MEMENUHI KONDISI YANG SUDAH DITENTUKAN
+        {   //MEMBERSIHKAN WARNING
+            document.getElementById("tampil").innerHTML="";
+            
+            // KARENA KONDISI SUDAH DI PENUHI
+            //BUAT LAH CETAKAN YG BERUPA CLASS BACA SLIDE UTK LEBIH NGERTI
+            class registerband{
+                constructor(nama,umur,suara,ras,tinggi)
+                {
+                    this.nama= nama;
+                    this.umur= umur;
+                    this.suara=suara;
+                    this.ras=ras;
+                    this.tinggi=tinggi;
+                }
+            }
+            //BIKIN OBJECT BARU UTK MENAMPUNG CETAKAN YANG INGIN DIKIRIMKAN,
+            // TIDAK WAJIB VAR, TAPI INI MEMPERMUDAH
+            var regisband= new registerband(nama,umur,suara,ras,tinggi);
+            // APA BILA TIDAK MENGGUNAKAN VARIABEL SEBAGAI PENAMPUNG
+            // bisa seprti ini untuk push.
+            //listband.push(new registerband(nama,umur,suara,ras,tinggi));
+            listband.push(regisband);
+            //push ini untuk dimasukkan object yang sudah di buat, ke dalam array
+            //menjadi array of object, baca di slide 8
+            output=`<tr>
+                <td>No.</td>
+                <td>Nama</td>
+                <td>Umur</td>
+                <td>Suara</td>
+                <td>Ras</td>
+                <td>Tinggi</td>
+                </tr>`;
+            for(var urut in listband)
+            //for ini untuk menjabarkan object yg ada di dalam array.
+            {
+                
+                output += `
+                <tr>
+                    <td>${parseInt(urut)+1}</td>
+                    <td>${listband[urut].nama}</td>
+                    <td>${listband[urut].umur}</td>
+                    <td>${listband[urut].suara}</td>
+                    <td>${listband[urut].ras}</td>
+                    <td>${listband[urut].tinggi}</td>
+                    </tr>`;
+            }
+            document.getElementById("table").innerHTML=output
+        }//else close
+    }
+
+
+    function fungsisort(x)//guna x untuk mengambil paramaeter(this.value)
+    //  yg ada di fungsisort(this.value)
+    {
+       
+        if(x=="sort asc")
+        //menjalankan sort asc sesuai kondisi
+        {
+
+               
+                for (i=0;i<listband.length-1;i++)
+                {
+                    for(j=i+1;j<listband.length;j++)
+                    {
+                        if(listband[i].nama>listband[j].nama)//tanda
+                        {
+                            var sort=listband[i];
+                            listband[i]=listband[j];
+                            listband[j]=sort;
+                        }
+                    }
+                }
+                //disini output direset menjadi
+                    output=`<tr>
+                    <td>No.</td>
+                    <td>Nama</td>
+                    <td>Umur</td>
+                    <td>Suara</td>
+                    <td>Ras</td>
+                    <td>Tinggi</td>
+                    </tr>`;
+
+                for(var urut in listband)
+                {
+                    //disini output ditambahkan
+                    output += `
+                    <tr>
+                        <td>${parseInt(urut)+1}</td>
+                        <td>${listband[urut].nama}</td>
+                        <td>${listband[urut].umur}</td>
+                        <td>${listband[urut].suara}</td>
+                        <td>${listband[urut].ras}</td>
+                        <td>${listband[urut].tinggi}</td>
+                        </tr>`;
+                
+                
+                }
+                document.getElementById("table").innerHTML=output
+                document.getElementById("swap").value="sort desc"//ini value yg di oper ke id swap
+            }//if
+            else if(x=="sort desc")
+            //menjalankan sort desc sesuai kondisi
+            {
+               
+            index=0;
+            for (i=0;i<listband.length-1;i++)
+            {
+                for(j=i+1;j<listband.length;j++)
+                {
+                    if(listband[i].nama<listband[j].nama)//tanda
+                    {
+                        var sort=listband[i];
+                        listband[i]=listband[j];
+                        listband[j]=sort;
+                    }
+                }
+            }
+                output=`<tr>
+                <td>No.</td>
+                <td>Nama</td>
+                <td>Umur</td>
+                <td>Suara</td>
+                <td>Ras</td>
+                <td>Tinggi</td>
+                </tr>`;
+            for(var urut in listband)
+            {
+                output += `
+                <tr>
+                    <td>${parseInt(urut)+1}</td>
+                    <td>${listband[urut].nama}</td>
+                    <td>${listband[urut].umur}</td>
+                    <td>${listband[urut].suara}</td>
+                    <td>${listband[urut].ras}</td>
+                    <td>${listband[urut].tinggi}</td>
+                    </tr>`;
+            }
+
+            
+        
+            document.getElementById("table").innerHTML=output
+        document.getElementById("swap").value="sort asc"//ini value yg di oper ke id swap
+        }//else if
+    }
+    
+
+
+        </script>
+</body>
+</html>

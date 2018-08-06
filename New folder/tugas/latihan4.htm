@@ -1,0 +1,65 @@
+<!-- // n0 19 -->
+<script>
+    var z='';
+    for (var i=0; i<19; i+=2)
+    {   for (var j=19; j>i ; j--)
+        {
+            z += ' &nbsp';
+        }
+        for (var j=0; j<=i ; j++)
+        {
+            z += 'x ' + '&nbsp';
+        }
+        z += '<br>';
+    }
+    document.write(z)
+
+</script>
+
+<!-- //no 20 -->
+<script>
+    var z='';
+    for (var i=0; i<19; i+=2)
+    {   for (var j=0; j<=i ; j++)
+        {
+            z += '&nbsp ';
+        }
+        for (var j=19; j>i ; j--)
+        {
+            z +='&nbsp' + ' x';
+        }
+        z += '<br>';
+    }
+    document.write(z)
+</script>
+
+<!-- no 21 -->
+<script>
+    var z='';
+    for (var i=0; i<20; i+=2)
+    {   for (var j=20; j>i ; j--)
+        {
+            z += ' &nbsp';
+        }
+        for (var j=0; j<=i ; j++)
+        {
+            z += 'x ' + ' &nbsp';
+        }
+        z += '<br>';
+    }
+    for (var i=0; i<19; i+=2)
+    {   for (var j=0; j<=i ; j++)
+        {
+            z += ' &nbsp';
+        }
+        for (var j=19; j>i ; j--)
+        {
+            z += '&nbsp ' + 'x';
+        }
+        z += '<br>';
+    }    
+
+    document.write(z)  
+
+</script>
+

@@ -1,0 +1,183 @@
+<html><head><title>SOLVE 7</title></head>
+<body>
+    <!-- <form id="form1">
+    Nama: <input type="text">
+    <br>
+    Age:  <input type="number">
+    <br>
+    Sex:  <input type="radio" name="sex" value="Pria"/>Pria
+    <input type="radio" name="sex" value="Wanita"/>Wanita
+    <br>
+    <input type="button" onclick="fungsiku2()" value="klik"/>    
+    </form>
+    <p id="print"></p>
+    <script>
+        
+        function fungsiku2()
+        {
+            var name = document.getElementById("form1").elements[0].value;
+            var umur = document.getElementById("form1").elements[1].value;
+            var sex='';
+            if(document.getElementById("form1").elements[2].checked)
+            {
+                sex=document.getElementById("form1").elements[2].value;
+            }
+            else if(document.getElementById("form1").elements[3].checked)
+            {
+                sex=document.getElementById("form1").elements[3].value;
+            }
+            var print = `Name :${name}
+            <br/>Umur :${umur}
+            <br/>Sex :${sex}
+            `
+            document.getElementById("print").innerHTML= print;
+        }
+    </script> -->
+
+
+    <!-- <form id="kuadrat">
+        Masukkan angka: <br>
+        <input type="number"><br>
+        <input type="button" onclick="fungsikuadrat()" value="kuadrat">
+    </form>
+    <p id="fungsikuadrat1"></p>
+    <script>
+    function fungsikuadrat()
+    {
+        var number= document.getElementById("kuadrat").elements[0].value;
+        var kuadrat= number**2;
+        document.getElementById("fungsikuadrat1").innerHTML= `Hasil ${number}<sup>2</sup>= ${kuadrat}`;
+    }
+    </script> -->
+
+    <!-- <form id="carikata">
+            Masukkan Kalimat: <br>
+            <input type="text"><br>
+            Karakter yang di cari: <br>
+            <input type="text"><br>
+            <input type="button" onclick="fungsicarikata()" value="cari">
+        </form>
+        <p id="fungsicarikata1"></p>
+        <script>
+        function fungsicarikata()
+        {
+            var kalimat= document.getElementById("carikata").elements[0].value;
+            var karakter= document.getElementById("carikata").elements[1].value;
+            var jumlahkata= kalimat.split(karakter).length-1;
+            document.getElementById("fungsicarikata1").innerHTML= `jumlah '${karakter}' sebanyak ${jumlahkata}`;
+        }
+        </script> -->
+
+        <!-- <form id="kalkulator">
+                Masukkan angka 1: <br>
+                <input type="number"><br>
+                Masukkan anka 2: <br>
+                <input type="number"><br>
+                <input type="button" onclick="fungsikali()" value="kali x">
+                <input type="button" onclick="fungsibagi()" value="bagi :">
+                <input type="button" onclick="fungsitambah()" value="tambah +">
+                <input type="button" onclick="fungsikurang()" value="kurang -">
+                <input type="button" onclick="fungsimodulus()" value="modulus %">
+                <input type="button" onclick="fungsipangkat()" value="pangkat ^">
+
+            </form>
+            <p id="hasil"></p>
+            <script>
+            function fungsikali()
+            {
+                var angka1= document.getElementById("kalkulator").elements[0].value;
+                var angka2= document.getElementById("kalkulator").elements[1].value;
+                var hasil = angka1 * angka2;
+                document.getElementById("hasil").innerHTML= `${angka1}x${angka2}=${hasil}`;
+            }
+            function fungsibagi()
+            {
+                var angka1= document.getElementById("kalkulator").elements[0].value;
+                var angka2= document.getElementById("kalkulator").elements[1].value;
+                var hasil = angka1 / angka2;
+                document.getElementById("hasil").innerHTML= `${angka1}:${angka2}=${hasil}`;
+            }
+            function fungsitambah()
+            {
+                var angka1= document.getElementById("kalkulator").elements[0].value;
+                var angka2= document.getElementById("kalkulator").elements[1].value;
+                var hasil = angka1 * angka2;
+                document.getElementById("hasil").innerHTML= `${angka1}x${angka2}=${hasil}`;
+            }
+            function fungsikurang()
+            {
+                var angka1= document.getElementById("kalkulator").elements[0].value;
+                var angka2= document.getElementById("kalkulator").elements[1].value;
+                var hasil = angka1 - angka2;
+                document.getElementById("hasil").innerHTML= `${angka1}-${angka2}=${hasil}`;
+            }
+            function fungsimodulus()
+            {
+                var angka1= document.getElementById("kalkulator").elements[0].value;
+                var angka2= document.getElementById("kalkulator").elements[1].value;
+                var hasil = angka1 % angka2;
+                document.getElementById("hasil").innerHTML= `${angka1}%${angka2}=${hasil}`;
+            }
+            function fungsipangkat()
+            {
+                var angka1= document.getElementById("kalkulator").elements[0].value;
+                var angka2= document.getElementById("kalkulator").elements[1].value;
+                var hasil = angka1 ** angka2;
+                document.getElementById("hasil").innerHTML= `${angka1}<sup>${angka2}</sup>=${hasil}`;
+            }
+            </script> -->
+
+            <form id="soal">
+                1. Siapakah Presiden ketiga Republik Indonesia?<br>
+                <input type="radio" name="soal1">Prof.H.J.Habibie v
+                <br><input type="radio" name="soal1">Abdurahman Wahid
+                <br><input type="radio" name="soal1">Ir. Soekarno
+                <br><input type="radio" name="soal1">Joko Widodo
+                <br>2. Berikut adalah nama-nama bahasa pemograman, kecuali . . .<br>
+                <input type="radio" name="soal2">Python
+                <br><input type="radio" name="soal2">Micro:bit v
+                <br><input type="radio" name="soal2">Java Script
+                <br><input type="radio" name="soal2">HTML
+                <br>3. Apa judul lagu yang diduga plagiat oleh lagu 'Sayang' Via Vallen?<br>
+                <input type="radio" name="soal3">Qing Fai De Yi
+                <br><input type="radio" name="soal3">Ting Hai
+                <br><input type="radio" name="soal3">Mirai E kiroro v
+                <br><input type="radio" name="soal3">Hau Siang Hau Siang
+                <br>4. Siapakah sosok di balik topeng Batman?<br>
+                <input type="radio" name="soal4">Natasha Romanov
+                <br><input type="radio" name="soal4">Peter Paker
+                <br><input type="radio" name="soal4">Tony Stark
+                <br><input type="radio" name="soal4">Bruce Wayne v
+                <br><input type="button" onclick="fungsiperiksa()" value="PERIKSA">
+                <p id="nilai1"></p>
+            </form>
+            <script>
+            function fungsiperiksa(){
+                var nilai=0;
+                if(document.getElementById("soal").elements[0].checked)
+                {
+                    nilai+=25;
+                }
+                else { nilai+=0;}
+                if(document.getElementById("soal").elements[5].checked)
+                {
+                    nilai+=25;
+                }
+                else { nilai+=0;}
+                if(document.getElementById("soal").elements[10].checked)
+                {
+                    nilai+=25;
+                }
+                else { nilai+=0;}
+                if(document.getElementById("soal").elements[15].checked)
+                {
+                    nilai+=25;
+                }
+                else { nilai+=0;}
+                document.getElementById("nilai1").innerHTML = `Nilai akhir anda ${nilai}`;
+            }
+            </script>
+            
+
+</body>
+</html>

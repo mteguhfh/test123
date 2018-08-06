@@ -1,0 +1,196 @@
+<html>
+    <head><title>SOLVE 4</title></head>
+    <body>
+        
+
+    <script>
+
+        var massa= parseInt(prompt("Masukan Massa : "));
+        var tinggi= parseInt(prompt("Masukan Tinggi : "));
+        var imt= (massa/tinggi)**2
+        alert(imt);
+        if(imt<18.5)
+        {
+            alert("berat badan kurang");
+        }
+        else if(imt>=18.5 && imt<=24.9)
+        {
+            alert("berat badan ideal");
+        }
+        else if(imt>=25.0 && imt<=29.9)
+        {
+            alert("BB berlebih");
+        }
+        else if(imt>=30.0 && imt<=39.9)
+        {
+            alert("BB sangat berlebih");
+        }
+        else if(imt>39.9)
+        {
+            alert("obesitas");
+        }
+        // var angka = prompt("Masukkan angka:");
+           
+          
+            // if(angka%2==0)
+            // { alert("Bilangan genap"); }
+            // else
+            // {alert("Bilangan ganjil");}
+
+
+            //     switch(true)
+            // {
+            //     case(angka%2== 0) :
+            //     alert("Bilangan genap");       
+            //     break;
+            //     case(angka%2!= 0) :
+            //     alert("Bilangan ganjil");       
+            //     break;           
+            //     default:
+            //     angka;
+                
+            // }
+            
+            var date=  new Date();
+            var bulan = date.getMonth();
+            var hari = date.getDay();
+            var tanggal = date.getDate();
+            var tahun = date.getFullYear();
+            var jam = date.getHours();
+            var menit = date.getMinutes();
+            var detik = date.getSeconds();
+           
+   
+    if(bulan==0)
+    {
+        document.write("Saat ini bulan 1 :January");
+    }
+    else if(bulan==1)
+    {
+        document.write("Saat ini bulan 2 :February");
+    }
+    else if(bulan==2)
+    {
+        document.write("Saat ini bulan 3 :Maret");
+    }
+    else if(bulan==3)
+    {
+    document.write("Saat ini bulan 4 :April");
+    }
+    else if(bulan==4)
+    {
+        document.write("Saat ini bulan 5 :May");
+    }
+    else if(bulan==5)
+    {
+        document.write("Saat ini bulan 6 :June");
+    }
+    else if(bulan==6)
+    {
+        document.write("Saat ini bulan 7 :July");
+    }
+    else if(bulan==7)
+    {
+    document.write("Saat ini bulan 8 :August");
+    }
+    else if(bulan==8)
+    {
+        document.write("Saat ini bulan 9 :September");
+    }
+    else if(bulan==9)
+    {
+        document.write("Saat ini bulan 10 :October");
+    }
+    else if(bulan==10)
+    {
+        document.write("Saat ini bulan 11 :November");
+    }
+    else if(bulan==11)
+    {
+        document.write("Saat ini bulan 12 :Desember");
+    }
+
+
+     if(bulan==0)
+    {
+        bulan="Januari";
+    }
+    else if(bulan==1)
+    {
+        bulan="February";
+    }
+    else if(bulan==2)
+    {
+        bulan="Maret";
+    }
+    else if(bulan==3)
+    {
+        bulan="April";
+    }
+    else if(bulan==4)
+    {
+        bulan="May";
+    }
+    else if(bulan==5)
+    {
+        bulan="June";
+    }
+    else if(bulan==6)
+    {
+        bulan="July";
+    }
+    else if(bulan==7)
+    {
+        bulan="August";
+    }
+    else if(bulan==8)
+    {
+        bulan="September";
+    }
+    else if(bulan==9)
+    {
+        bulan="October";
+    }
+    else if(bulan==10)
+    {
+        bulan="November";
+    }
+    else if(bulan==11)
+    {
+        bulan="Desember";
+    }
+    
+    if(hari==0)
+    {
+        hari="minggu";
+    }
+    else if(hari==1)
+    {
+        hari="senin";
+    }
+    else if(hari==2)
+    {
+        hari="selasa";
+    }
+    else if(hari==3)
+    {
+        hari="rabu";
+    }
+    else if(hari==4)
+    {
+        hari="kamis";
+        
+    }
+    else if(hari==5)
+    {
+        hari="jumat";
+    }
+    else if(hari==6)
+    {
+        hari="sabtu";
+    }
+
+    document.write("<br>Hari ini "+hari+" , "+tanggal+" "+bulan+" "+tahun+"<br>Pukul "+jam+":"+menit+":"+detik);
+    </script>
+    </body>
+</html>

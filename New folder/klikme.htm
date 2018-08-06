@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- CSS Style Line hehe-->
+    <style>
+        body {
+    background-color: #222222;
+}
+
+#bulboff{
+    margin-top: 20px;
+}
+
+.glyphicon-off{
+    color: white;
+    font-size: 20px;
+}
+
+.btn-success{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+button{
+    margin-top: 50px;
+}
+
+*:focus{
+    outline: none !important;
+}
+
+.instruction{
+    color: white;
+}
+
+#img{
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+    display: none;
+}
+    </style>
+    <meta charset="utf-8">
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <script>
+    function turnOn()
+    {
+    var bulboff = document.getElementById("bulboff");
+    var btn = document.getElementById("btn");
+    var img = document.getElementById("img");
+    var ins = document.getElementById("ins");
+    
+    bulboff.style.display = "none";
+    btn.style.display = "none";
+    ins.style.display = "none";
+    img.style.display = "block";
+    }
+     </script>
+    </head>
+    <body>
+    <center>
+        <img id="bulboff" src="https://d14nx13ylsx7x8.cloudfront.net/lesson_image_blocks/assets/000/001/412/original/pic_bulboff.gif" /><br />
+        
+        <img id="img" src="http://www.cangcut.net/wp-content/uploads/2013/05/pijat-1024x1024.jpg">
+        
+        <button id="btn" onclick="turnOn()" class="btn btn-success">
+        <i class="glyphicon glyphicon-off"></i>
+        </button><br /><br />
+        
+        <center>
+        <h2 id="ins" class="instruction">
+        <i class="glyphicon glyphicon-arrow-up"></i><br /><br />
+        Nyalakan Lampunya ya!
+        </h2>
+        </center>
+    </center>
+    </body>
+</html>
